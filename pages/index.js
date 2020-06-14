@@ -61,7 +61,9 @@ export default class Home extends React.Component {
 		const {
 			startDate, selectedOption, data, width,
 		} = this.state;
-		const predictions = predictOnDate(startDate.toISOString());
+		const today = new Date();
+		const date = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 23, 59, 59, 0);
+		const predictions = predictOnDate(date.toISOString());
 		return (
 			<div className="container">
 				<Head>
