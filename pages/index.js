@@ -69,6 +69,7 @@ export default class Home extends React.Component {
 				<Head>
 					<title>Covid-19 Predictor</title>
 					<link rel="icon" href="/favicon.ico" />
+					<script async defer src="https://buttons.github.io/buttons.js" />
 				</Head>
 				<main>
 					<h2 className="title">
@@ -97,6 +98,7 @@ export default class Home extends React.Component {
 						{' '}
 						<b>{dateFormatter(startDate)}</b>
 					</p>
+					<a className="github-button" href="https://github.com/bietkul/covid-predictor" data-icon="octicon-star" aria-label="Star bietkul/covid-predictor on GitHub">Star</a>
 
 					<div className="grid">
 						<div className="card">
