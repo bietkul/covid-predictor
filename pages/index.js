@@ -52,7 +52,7 @@ export default class Home extends React.Component {
 			});
 		}
 		this.setState({
-			width: window.innerWidth - 100,
+			width: window.innerWidth > 400 ? window.innerWidth - 100 : window.innerWidth,
 			data,
 		});
 	}
@@ -142,13 +142,13 @@ export default class Home extends React.Component {
 					</div>
 
 					<AreaChart
-						width={width - 100}
+						width={width}
 						height={400}
 						data={data}
 						margin={{
 							top: 10,
-							right: 30,
-							left: 100,
+							right: width > 600 ? 30 : 20,
+							left: width > 600 ? 100 : 20,
 							bottom: 0,
 						}}
 					>
