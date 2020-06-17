@@ -74,9 +74,12 @@ export function predictOnDate(date) {
 		predictions.Recovered += output[1];
 		predictions.Deaths += output[2];
 	}
-	const totalActive = Math.floor(predictions.Active + india[lastRecordIndex].Active);
-	const totalRecovered = Math.floor(predictions.Recovered + india[lastRecordIndex].Recovered);
-	const totalDeaths = Math.floor(predictions.Deaths + india[lastRecordIndex].Deaths);
+	const totalActive = Math.max(Math.floor(predictions.Active + india[lastRecordIndex].Active), 0);
+	const totalRecovered = Math.max(
+		Math.floor(predictions.Recovered + india[lastRecordIndex].Recovered),
+		0,
+	);
+	const totalDeaths = Math.max(Math.floor(predictions.Deaths + india[lastRecordIndex].Deaths), 0);
 	return {
 		TotalConfirmed: totalActive + totalRecovered + totalDeaths,
 		TotalActive: totalActive,
