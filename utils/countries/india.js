@@ -2043,18 +2043,4 @@ module.exports = [
 		Active: 183022,
 		Date: '2020-06-23T00:00:00Z',
 	},
-	{
-		Country: 'India',
-		CountryCode: 'IN',
-		Province: '',
-		City: '',
-		CityCode: '',
-		Lat: '20.59',
-		Lon: '78.96',
-		Confirmed: 473105,
-		Deaths: 0,
-		Recovered: 0,
-		Active: 473105,
-		Date: '2020-06-24T00:00:00Z',
-	},
 ];
